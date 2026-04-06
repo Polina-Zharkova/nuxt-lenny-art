@@ -1,12 +1,12 @@
 <template>
     <header class="page-header">
   <div class="page-header__container">
-    <a href="#" class="page-header__logo">
+    <NuxtLink to="/" class="page-header__logo">
         <SvgIcon class="page-header__logo-icon" name="logo" width="202" height="147"/>
-    </a> 
+    </NuxtLink> 
     
     <nav class="page-header__nav" :class="{ 'page-header__nav--active': navActive }">
-      <a class="page-header__nav-link" href="events.html">Мероприятия</a>
+      <NuxtLink class="page-header__nav-link" to="/events">Мероприятия</NuxtLink>
       <a class="page-header__nav-link" href="#">Блог</a>
       <a class="page-header__nav-link" href="#">О нас</a>
       <a class="page-header__nav-link" href="#">Контакты</a>
@@ -155,7 +155,11 @@
         font-size: 16px;
         line-height: 22px;
       }
+      &.router-link-active {
+        color: @red_dark;
+      }
     }
+    
     &__right-block {
       position: relative;
       display: flex;

@@ -5,7 +5,7 @@
 
 
     <main class="app__main">
-      Основное тело страницы
+      <NuxtPage class="app__page" />
     </main>
 
 
@@ -101,9 +101,15 @@ const store = useStore();
   }
   &__main {
     flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  &__page {
+    flex: 1 0 auto;
   }
   &__footer {
     flex: 0 0 auto;
+    margin-top: auto;
   }
 }
 </style>
