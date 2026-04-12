@@ -30,46 +30,56 @@
 
 <style lang="less">
 .app-listing {
-    box-sizing: border-box;
+  .container;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 100%;
-    max-width: 1414px;
-    .container();
-    
-    &__events-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 120px 58px;
-    margin: 0 -29px -120px;
-    @media @bw1660 {
-      gap: 90px 40px;
-    }
-    @media @bw1020 {
-      gap: 90px 30px; 
-    }
-    @media @bw650 {
-      gap: 60px 0;
-      justify-content: center;
-    }
 
-&__event-card {
-   width: calc(33.3333% - 38.666px); 
-   margin: 0 29px 120px;
-   @media @bw1660 {
-      width: calc(33.3333% - 26.666px);
-      }
-    @media @bw1020 {
-        width: calc(50% - 15px);
-      }
-    @media @bw650 {
-      max-width: 450px;
-      width: 100%;
+    &__article-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-  }
-}
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -30px -120px;
+      @media @bw1660 {
+        margin: 0 -20px -100px;
+      }
+      @media @bw1340 {
+        margin: 0 -15px -100px;
+      }
+      @media @bw1020 {
+        justify-content: center;
+        margin: 0 -15px -80px;
+      }
+      @media @bw768 {
+        margin: 0 -10px -80px;
+      }
+      @media @bw650 {
+        margin: 0 0 -60px;
+      }
+    }
+    &__card {
+      width: calc(33.3333% - 60px); 
+      margin: 0 30px 120px;
+      @media @bw1660 {
+        width: calc(33.3333% - 48px);
+        margin: 0 20px 100px;
+      }
+      @media @bw1340 {
+        width: calc(33.3333% - 30px); 
+        margin: 0 15px 100px;
+      }
+      @media @bw1020 {
+        width: calc(50% - 30px); 
+        max-width: 405px;
+        margin: 0 15px 80px;
+      }
+    }
+    &__more-btn {
+      align-self: center;
+      margin-top: 120px;
+    }
 }
 </style>
