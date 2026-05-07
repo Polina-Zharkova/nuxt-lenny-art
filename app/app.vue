@@ -27,7 +27,8 @@ const store = useStore();
     },
     bodyAttrs: {
       class: {
-        "overflow-nav": () => store.navActive
+        "overflow-nav": () => store.navActive,
+        "overflow": () => store.navActive,
       }
     },
     title: "Lenni Art",

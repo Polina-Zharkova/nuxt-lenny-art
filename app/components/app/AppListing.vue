@@ -2,11 +2,11 @@
   <section class="app-listing">
     <h1 class="app-listing__title section-title">{{ title }}</h1>
 
-    <div class="app-listing__list">
-      <slot />
+    <div :class="listClass">
+      <slot :list="list"/>
     </div>
 
-    <button type="button" class="more-btn app-listing__more-btn">
+    <button v-if="moreBtn" type="button" class="more-btn app-listing__more-btn">
       Показать всё
 
       <SvgIcon
@@ -16,6 +16,9 @@
         height="92"
       />
     </button>
+
+    <a 
+   v-else-if="moreLink" href="#" class="app-listing__link link">Смотреть все</a>
   </section>
 </template>
 
@@ -25,7 +28,34 @@
       type: String,
       default: "",
     },
+    url: {
+      type: String,
+      default: "",
+      required: true
+    },
+    moreBtn: {
+      type: Boolean,
+      default: false
+    },
+      moreLink: {
+      type: Boolean,
+      default: false
+    },
+    grid: {
+      type: String,
+      default: "row",
+    },
   });
+
+  const listClass = computed(() => props.grid ==="column" ? "app-listing__column-list" : "app-listing__list")
+
+  const list = ref([]);
+
+    const { data } = props.url ? await useAsyncData(`list-${props.url}`, () => {
+    return $fetch(props.url);
+  }) : { data: null };
+
+  if (data?.value) list.value = data.value;
 </script>
 
 <style lang="less">
@@ -34,7 +64,7 @@
     display: flex;
     flex-direction: column;
 
-    &__article-list {
+    &__column-list {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -80,6 +110,12 @@
     &__more-btn {
       align-self: center;
       margin-top: 120px;
+    }
+    &__link {
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: 75px;
     }
 }
 </style>
