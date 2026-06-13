@@ -35,6 +35,11 @@
         
         <div class="event__container">
       <div class="content event__content" v-html="data.content"></div>
+
+      <EventReserve 
+      class="event__reserve"
+      />
+
     </div>
     </article>
     <div v-else>

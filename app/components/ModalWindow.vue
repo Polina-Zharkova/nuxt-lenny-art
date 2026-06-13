@@ -19,13 +19,14 @@
           </div>
 
           <div class="modal-window__container">
-            <h2 class="modal-window__title" v-html="title">
+            <h2 class="modal-window__title" v-html="title"></h2>
 
-            </h2>
-
-            <slot>
-              <input type="text"> 
-            </slot>
+            <div class="modal-window__scrollable">
+              <div class="modal-window__content">
+               <slot></slot> 
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -35,6 +36,8 @@
 </template>
 
 <script setup>
+import { computed, watch, onBeforeUnmount } from 'vue';
+
 const props = defineProps({
   name: {
     type: String,
@@ -62,6 +65,34 @@ const close = () => {
 const onEsc = (event) => {
   if (event.key === "Escape" ||event.keyCode === 27) close();
 }
+
+const blockScroll = () => {
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.body.style.overflow = 'hidden';
+  document.body.style.paddingRight = `${scrollbarWidth}px`;
+}
+
+const unblockScroll = () => {
+  document.body.style.overflow = '';
+  document.body.style.paddingRight = '';
+}
+
+watch(() => isActive.value, (newValue) => {
+  if (newValue) {
+    blockScroll();
+  } else {
+    unblockScroll();
+  }
+});
+
+if (isActive.value) {
+  blockScroll();
+}
+
+onBeforeUnmount(() => {
+  unblockScroll();
+
+});
 </script>
 
 <style lang="less">
@@ -113,12 +144,16 @@ const onEsc = (event) => {
         width: 100%;
         max-width: 950px;
         margin: 0 auto;
-        padding: 0 40px 40px;
+        padding: 0 0 40px 40px;
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 100px);
         @media @bw768 {
-            padding: 0 30px 40px;
+            padding: 0 0 30px 40px;
+            max-height: calc(100vh - 80px);
         }
         @media @bw400 {
-            padding: 0 20px 40px;
+            padding: 0 0 20px 40px;
         }
     }
     &__title {
@@ -138,6 +173,7 @@ const onEsc = (event) => {
         color: @white;
         letter-spacing: 0.02em;
         z-index: 1;
+        flex-shrink: 0; 
     @media @bw1340 {
         width: 515px;
         margin: 40px 0 70px -45px;
@@ -173,5 +209,33 @@ const onEsc = (event) => {
             right: -18px;
         }
     }
+     &__scrollable {
+    flex: 1;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    margin-right: -30px; 
+    padding-right: 20px;
+     &::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: fade(@black, 20%);
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: @white;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
   }
+  &__content {
+    padding-right: 45px;
+    @media @bw768 {
+      padding-right: 10px;
+    }
+  }
+  }
+  
   </style>

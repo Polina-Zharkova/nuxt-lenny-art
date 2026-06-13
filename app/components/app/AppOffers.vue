@@ -12,7 +12,9 @@
             </button>
         </div>
 
-        <ModalWindow alive :name="'getOffer'" :title="'Заполните форму<br />и мы подберем площадку'"/>
+        <ModalWindow alive :name="'getOffer'" :title="'Заполните форму<br />и мы подберем площадку'">
+            <EventsForm @close="closePopup" />
+        </ModalWindow>
     </section>
 </template>
 
@@ -20,7 +22,11 @@
 const store = useStore();
 const openPopup = () => {
 store.openModal("getOffer");
-}
+};
+
+const closePopup = () => {
+store.closeModal("getOffer");
+};
 </script>
 
 <style lang="less">

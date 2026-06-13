@@ -1,10 +1,10 @@
 <template>
   <div class="events">
-    <nav class="events__breadcrumbs">
-      <a href="/" class="breadcrumbs__link">Главная</a>
-      <span class="breadcrumbs__separator">/</span>
-      <span class="breadcrumbs__current">Мероприятия</span>
-    </nav>
+    <div class="events__breadcrumbs">
+    <NuxtLink to="/" class="events__link">Главная</NuxtLink>
+    <span class="events__separator">/</span>
+    <span class="events__current">Мероприятия</span>
+  </div>
 
     <AppListing 
     v-slot="{ list }" 
@@ -46,10 +46,29 @@
       margin-bottom: 10px;
       display: flex;
       align-items: center;
+      margin-top: -160px;
       color: @black;
       text-decoration: none;
     }
+      &__link {
+        font-family: @font1;
+        text-decoration: none;
+        color: @black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
 
+   &__separator {
+    margin: 0 5px; 
+    font-family: @font1;
+    color: @black;
+  }
+  
+  &__current {
+    font-family: @font1;
+    color: @black;
+  }
     &__listing {
         margin-bottom: 100px;
     }
