@@ -25,6 +25,8 @@
 
     <AppOffers class="events__offers"/>
 
+    <AppInfo class="events__info" />
+    
   </div>
 </template>
 

@@ -29,9 +29,7 @@
                         <h4 class="app-contacts__item-title">
                             Отдел аренды
                         </h4>
-                        <a href="tel: +73822907256" class="app-contacts__item-info">
-                            8(3822) 90-72-56
-                        </a>
+                        <a href="tel:+73822907256" class="app-contacts__item-info">8(3822) 90-72-56</a>
                         <a href="mailto:idat@tusur.ru" class="app-contacts__item-info">
                             idat@tusur.ru
                         </a>
@@ -45,9 +43,7 @@
                         <h4 class="app-contacts__item-title">
                             Отдел мероприятий
                         </h4>
-                        <a href="tel: +73822907256" class="app-contacts__item-info">
-                            8(3822) 90-72-56
-                        </a>
+                        <a href="tel:+73822907256" class="app-contacts__item-info">8(3822) 90-72-56</a>
                         <a href="mailto:idat@tusur.ru" class="app-contacts__item-info">
                             idat@tusur.ru
                         </a>
@@ -61,8 +57,6 @@
     </section>
 
 </template>
-
-
 
 <script setup></script>
 <style lang="less">

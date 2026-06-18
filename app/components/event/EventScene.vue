@@ -6,7 +6,8 @@
           viewBox="0 0 780 399"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          id="js-reserveScene">
+          id="js-reserveScene"
+          >
 
   <g class="event-scene__dance-floor">
     <path

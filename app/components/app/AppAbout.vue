@@ -4,7 +4,7 @@
             <h2 class="app-about__title section-title">О нас</h2>
 
             <div class="app-about__item">
-                <h4 class="app-about__sub-title">Проект "Millennials"</h4>
+                <h2 class="app-about__sub-title">Проект "Millennials"</h2>
 
                 <p class="app-about__text app-about__text--1">
                     Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием 

@@ -10,12 +10,19 @@
       <a class="page-header__nav-link" href="#">Блог</a>
       <a class="page-header__nav-link" href="#">О нас</a>
       <a class="page-header__nav-link" href="#">Контакты</a>
+      <div class="page-header__user-nav">
+          <a href="#" class="page-header__user-nav-link">
+            <span>Александр С.</span>
+            <SvgIcon class="page-header__user-nav-icon" name="log-in" width="21" height="18" />
+          </a>
+        </div>
+
     </nav>
     
     <div class="page-header__right-block">
       <a href="#" class="page-header__user-btn">
         Войти
-       <SvgIcon class="page-header__user-icon" name="user" width="21" height="18"/>
+       <SvgIcon class="page-header__user-icon" name="user" width="24" height="24"/>
        </a>
       
       <button type="button" class="page-header__nav-toggle" 
@@ -98,6 +105,7 @@
       width: 100%;
       height: 100%;
     }
+
     &__nav {
       box-sizing: border-box;
       display: flex;
@@ -159,7 +167,48 @@
         color: @red_dark;
       }
     }
+
+
+    &__user-nav {
+    display: none;
     
+    @media @bw1020 {
+      display: block;
+      margin-top: 0;
+      padding-top: 30px;
+      width: 100%;
+    }
+    @media @bw768 {
+      padding-top: 20px; 
+    }
+  }
+
+  &__user-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    color: @black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    transition: color 0.2s;
+    @media @bw768 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__user-nav-icon {
+    width: 24px;
+    height: 24px;
+    color: @black;
+    @media @bw768 {
+      width: 24px;
+      height: 24px;
+    }
+  }
     &__right-block {
       position: relative;
       display: flex;

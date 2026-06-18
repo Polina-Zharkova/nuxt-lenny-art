@@ -1,6 +1,14 @@
 <template>
     <article v-if="data" class="event">
         <header class="event__header">
+            <div class="event__breadcrumbs">
+                <NuxtLink to="/" class="event__link">Главная</NuxtLink>
+                <span class="event__separator">/</span>
+                <span class="event__last">Мероприятия</span>
+                <span class="event__separator">/</span>
+                <span class="event__current">Вечер | The Best of Sade</span>
+            </div>
+
             <h1 class="event__title title">
                 {{ data.title }}
             </h1>
@@ -85,6 +93,40 @@
     &__container {
         .container;
     }
+    &__breadcrumbs {
+    .container;
+      font-family: @font1;
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      margin-top: -100px;
+      color: @black;
+      text-decoration: none;
+    }
+    &__link {
+        font-family: @font1;
+        text-decoration: none;
+        color: @black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &__separator {
+    margin: 0 5px; 
+    font-family: @font1;
+    color: @black;
+  }
+  &__last {
+    font-family: @font1;
+    color: @black;
+  }
+  
+  &__current {
+    font-family: @font1;
+    color: @black;
+  }
+
     &__about {
         display: flex;
         justify-content: center;

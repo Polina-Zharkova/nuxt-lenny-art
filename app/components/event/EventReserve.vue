@@ -200,7 +200,8 @@ const onTableClick = (table) => {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        max-width: 700px;
+        max-width: 700px;  
+        position: relative;
     }
     &__legend {
         grid-area: legend;
@@ -236,6 +237,7 @@ const onTableClick = (table) => {
         }
     }
     &__scheme-title {
+        width: 60px;
         margin: 0 0 40px;
         padding: 6px 56px;
         background-color: @black;
@@ -243,23 +245,17 @@ const onTableClick = (table) => {
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
+        position: relative;
+        text-align: center;
+        left: 39%;
     }
     &__scheme-wrapper {
-        position: relative;
         width: 100%;
-        &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            padding-top: 51.15384%;
-        }
     }
     &__scene {
-        position: absolute;
-        top: 0;
-        left: 0;
+        display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
     }
     &__tickets-list {
         margin: 0 0 25px;
