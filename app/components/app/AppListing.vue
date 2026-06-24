@@ -7,7 +7,7 @@
     </div>
 
     <button v-if="moreBtn" type="button" class="more-btn app-listing__more-btn">
-      Показать всё
+      Показать еще
 
       <SvgIcon
         class="more-btn__arrow"

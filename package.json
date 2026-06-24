@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "-": "^0.0.1-security.1",
     "@pinia/nuxt": "^0.11.3",
     "@vee-validate/i18n": "^4.15.1",
     "@vee-validate/rules": "^4.15.1",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "less": "^4.6.4",
+    "svgo": "^4.0.1",
     "vite-svg-loader": "^5.1.1",
     "vite-tsconfig-paths": "^6.1.1"
   }
