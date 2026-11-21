@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 import svgLoader from "vite-svg-loader";
+import replace from "@rollup/plugin-replace";
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -8,6 +9,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   vite: {
+          build: {
+        minify: false
+      },
       css: {
         preprocessorOptions: {
           less: {
@@ -18,7 +22,13 @@ export default defineNuxtConfig({
           },
         },
       },
-      plugins: [svgLoader()],
+      plugins: [svgLoader(),
+        replace({
+        'new URL(': 'new globalThis.URL(',
+        delimiters: ['', ''],
+        preventAssignment: true
+      })
+      ],
     },
 
   modules: ["@pinia/nuxt"],
@@ -150,5 +160,9 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+   sourcemap: {
+    server: true,
+    client: true
   }
 })
