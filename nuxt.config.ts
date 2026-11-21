@@ -8,38 +8,13 @@ export default defineNuxtConfig({
   css: ["@/styles/styles.less"],
   devtools: { enabled: true },
 
-  vite: {
-          build: {
-        minify: false
-      },
-      css: {
-        preprocessorOptions: {
-          less: {
-            additionalData: `
-              @import "@/styles/variables.less";
-              @import "@/styles/mixins.less";
-            `,
-          },
-        },
-      },
-      plugins: [svgLoader(),
-        replace({
-        'new URL(': 'new globalThis.URL(',
-        delimiters: ['', ''],
-        preventAssignment: true
-      })
-      ],
-    },
-
-  modules: ["@pinia/nuxt"],
-
   app: {
+    baseURL: '/nuxt-lenny-art/',
     head: {
       meta: [
         { name: 'msapplication-TileColor', content: '#ffffff' },
         { name: 'theme-color', content: '#ffffff' }
       ],
-      
       link: [
         { 
           rel: 'icon', 
@@ -161,7 +136,33 @@ export default defineNuxtConfig({
       ]
     }
   },
-   sourcemap: {
+   vite: {
+    build: {
+      minify: false
+    },
+    css: {
+      preprocessorOptions: {
+        less: {
+          additionalData: `
+            @import "@/styles/variables.less";
+            @import "@/styles/mixins.less";
+          `,
+        },
+      },
+    },
+    plugins: [
+      svgLoader(),
+      replace({
+        'new URL(': 'new globalThis.URL(',
+        delimiters: ['', ''],
+        preventAssignment: true
+      })
+    ],
+  },
+
+  modules: ["@pinia/nuxt"],
+
+  sourcemap: {
     server: true,
     client: true
   }
