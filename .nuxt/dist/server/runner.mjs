@@ -1,0 +1,1 @@
+export { default } from "file:///C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/@nuxt/vite-builder/dist/vite-node-runner.mjs"
