@@ -1,0 +1,35 @@
+import { a as buildAssetsURL } from '../_/renderer.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/h3/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/ufo/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/destr/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/vue/server-renderer/index.mjs';
+import '../_/nitro.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/nitropack/node_modules/hookable/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/ofetch/dist/node.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/node-mock-http/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/unstorage/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/ohash/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/klona/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/defu/dist/defu.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/scule/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/radix3/dist/index.mjs';
+import 'node:fs';
+import 'node:url';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/pathe/dist/index.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/unhead/dist/server.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/devalue/index.js';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/unhead/dist/utils.mjs';
+import 'file://C:/nuxt/lenny2026/nuxt-lenny-art/node_modules/vue/index.mjs';
+
+const ModalWindow_vue_vue_type_style_index_0_lang = ".container{box-sizing:border-box;margin:0 auto;max-width:1414px;padding-left:40px;padding-right:40px;width:100%}@media(max-width:1339px){.container{padding-left:30px;padding-right:30px}}@media(max-width:767px){.container{padding-left:20px;padding-right:20px}}.width_624{box-sizing:border-box;max-width:624px;width:100%}@media(max-width:1659px){.width_624{max-width:604px}}@media(max-width:1339px){.width_624{max-width:566px}}.is-hidden{border:0!important;height:0!important;margin:0!important;padding:0!important;position:absolute!important;width:0!important;clip:rect(0 0 0 0)!important;clip-path:inset(100%)!important;overflow:hidden!important;pointer-events:none!important;visibility:hidden!important;white-space:nowrap!important}.modal-window{box-sizing:border-box;display:flex;inset:0;position:fixed;z-index:110}@supports (backdrop-filter:blur(20px)){.modal-window{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background-color:#1f1e1e66}}@media(max-width:1339px){.modal-window{padding:90px 40px 50px}}@media(max-width:1019px){.modal-window{padding:90px 40px 50px}}@media(max-width:767px){.modal-window{padding:85px 20px 50px}}@media(max-width:599px){.modal-window{padding:80px 20px 50px}}.modal-window__wrapper{background-color:#dedede;background-image:url(" + buildAssetsURL("noise.FioDyxHE.png") + ");background-position:0 0;background-repeat:repeat;background-size:auto;box-shadow:6px 0 30px #1f1f1e8c;box-sizing:border-box;display:flex;flex-direction:column;margin:auto;max-width:1210px;position:relative;width:100%}@supports (backdrop-filter:blur(20px)){.modal-window__wrapper{box-shadow:none}}.modal-window__container{box-sizing:border-box;display:flex;flex-direction:column;margin:0 auto;max-height:calc(100vh - 100px);max-width:950px;padding:0 0 40px 40px;width:100%}@media(max-width:767px){.modal-window__container{max-height:calc(100vh - 80px);padding:0 0 30px 40px}}@media(max-width:399px){.modal-window__container{padding:0 0 20px 40px}}.modal-window__title{align-items:center;background-color:#1f1e1e;box-sizing:border-box;color:#fff;display:flex;flex-shrink:0;font-family:Lora,serif;font-size:22px;font-weight:400;letter-spacing:.02em;line-height:1.36;margin:-40px 0 70px -85px;min-height:80px;padding:10px 85px;text-transform:uppercase;width:595px;z-index:1}@media(max-width:1339px){.modal-window__title{margin:40px 0 70px -45px;padding:10px 45px;width:515px}}@media(max-width:1169px){.modal-window__title{margin:40px 0 70px -20px;padding:10px 20px;width:465px}}@media(max-width:767px){.modal-window__title{font-size:14px;margin:-30px 0 40px;max-width:calc(100% - 15px);min-height:60px;padding:10px 20px;width:300px}}.modal-window__sticky-close{height:auto;position:absolute;right:0;top:0;width:auto}.modal-window__x-btn{position:relative;right:-30px;top:-30px}@media(max-width:767px){.modal-window__x-btn{right:-18px;top:-18px}}.modal-window__scrollable{flex:1;margin-right:-30px;overflow-x:hidden;overflow-y:auto;padding-right:20px}.modal-window__scrollable::-webkit-scrollbar{width:4px}.modal-window__scrollable::-webkit-scrollbar-track{background:#1f1e1e33;border-radius:4px}.modal-window__scrollable::-webkit-scrollbar-thumb{background:#fff;border-radius:4px;-webkit-transition:background .2s;transition:background .2s}.modal-window__content{padding-right:45px}@media(max-width:767px){.modal-window__content{padding-right:10px}}";
+
+const ModalWindowStyles_B74ImilB = [
+  ModalWindow_vue_vue_type_style_index_0_lang
+];
+
+export { ModalWindowStyles_B74ImilB as default };
+//# sourceMappingURL=ModalWindow-styles.B74ImilB.mjs.map
