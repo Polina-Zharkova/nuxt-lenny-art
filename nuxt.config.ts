@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   modules: ["@pinia/nuxt"],
 
   app: {
+    baseURL: '/nuxt-lenny-art/',
     head: {
       meta: [
         { name: 'msapplication-TileColor', content: '#ffffff' },
