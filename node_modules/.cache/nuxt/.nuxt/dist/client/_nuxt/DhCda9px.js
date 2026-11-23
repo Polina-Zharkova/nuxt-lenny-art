@@ -1,0 +1,1 @@
+import{o,c as t,a as l}from"./DvdFAsSG.js";const n={xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24"};function r(c,e){return o(),t("svg",n,[...e[0]||(e[0]=[l("rect",null,null,-1),l("circle",{cx:"12",cy:"12",r:"9",fill:"#bc3324"},null,-1)])])}const a={render:r};export{a as default,r as render};
