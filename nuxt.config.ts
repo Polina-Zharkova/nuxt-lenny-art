@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     },
 
   modules: ["@pinia/nuxt"],
+   sourcemap: { client: true },
 
   app: {
     baseURL: '/nuxt-lenny-art/',
@@ -140,10 +141,7 @@ export default defineNuxtConfig({
           sizes: '144x144', 
           href: '/ms-icon-144x144.png' 
         },
-        { 
-          rel: 'manifest', 
-          href: '/site.webmanifest' 
-        },
+
         { 
           rel: 'mask-icon', 
           href: '/safari-pinned-tab.svg', 

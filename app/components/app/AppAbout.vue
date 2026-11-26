@@ -12,11 +12,11 @@
                     им воплотить их мечту в реальность.
                 </p>
 
-                <img 
-                src="@/assets/images/about/about_1.jpg"
+               <img 
+                src="/images/about/about_1.jpg"
                 alt="about_1"
                 class="app-about__image"
-                />
+                /> 
             </div>
 
             <div class="app-about__item-2">
@@ -33,7 +33,7 @@
                 </div>
 
                 <img 
-                src="@/assets/images/about/about_2.jpg"
+                src="/images/about/about_2.jpg"
                 alt="about_2"
                 class="app-about__image-2"
                 />
@@ -41,8 +41,8 @@
 
             <div class="app-about__item-3">
                 <div class="app-about__image-3-wrap">
-                    <img 
-                        src="@/assets/images/about/about_3.jpg"
+                <img 
+                        src="/images/about/about_3.jpg"
                         alt="about_3"
                         class="app-about__image-3"
                         />
@@ -225,13 +225,13 @@
     box-sizing: border-box;
     flex-shrink: 0;
     position: relative;
-    width: calc(65.217 + 60px);
+    width: calc(65.217% + 60px);
     padding: 18px 8px 0 38px;
      @media @bw1660 {
-        width: calc(65.714 + 40px);
+        width: calc(65.714% + 40px);
      }
      @media @bw1340  {
-        width: calc(65.714 + 0px); 
+        width: calc(65.714% + 0px); 
      }
      @media @bw1020 {
         width: 100%;

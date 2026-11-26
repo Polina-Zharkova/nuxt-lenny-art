@@ -3,6 +3,7 @@
     <div class="app-upcoming__wrapper">
         <div class="app-upcoming__container">
             <h2 class="app-upcoming__title section-title">Мероприятия</h2>
+            
 
              <TheSwiper :component="EventCard" :list="list" class="app-upcoming__swiper" />
 
@@ -17,7 +18,7 @@
 import { EventCard } from "#components"
 const list = ref([]);
 
-  const URL = "http://localhost:3000/json/events.json";
+  const URL = "/json/events.json";
 
   const { data } = await useAsyncData(`upcoming`, () => {
     return $fetch(URL);
